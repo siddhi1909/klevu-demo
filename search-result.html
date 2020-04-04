@@ -1,0 +1,842 @@
+<!doctype html>
+<html>
+<body>
+<!-- klevu fix topbar -->
+<div class="kuTopbar" style="color:#FFF;"> Klevu Search Demo</div>
+<!-- klevu fix topbar -->
+<div class="main">
+    <div class="container">
+        <div class="row client-header">
+            <div class="client-logo-block">
+                <a href="index.html" class="client-logo">
+                    <img class="scaleAll" src="img/logo-green.png" id="Logo" alt="" title=""/>
+                </a>
+            </div>
+            <div class="searchfield-block">
+                <div class="search-block">
+                    <form id="search_mini_form" action="#" method="get" data-step="1"
+                          data-intro="Start typing in the search box using the examples below. Press Enter to see the search results page.">
+                        <div class="input-box">
+                            <input id="search" type="search" name="q" value="" class="searchField"
+                                   placeholder="Type your search term here...">
+                            <button type="submit" title="Search" class="button search-button">
+									<span>
+										<span>Search</span>
+									</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!--ends row-->
+    </div>
+    <!--ends container-->
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="kuContainer kuFiltersLeft" id="kuMainContainer">
+                    <div id="ku-search-form" class="ku-search-block-full" style="display:none;">
+                        <form action="/pages/search-results" method="get" role="search">
+                            <input type="search" name="q" id="ku-search-field" class="ku-searchfield"
+                                   placeholder="Search text" autocomplete="off" maxlength="255">
+                            <input type="button" title="Search" id="ku-search-btn" value="" class="ku-search-btn">
+                        </form>
+                    </div>
+                    <div class="klevu-clear-both"></div>
+                    <div id="loader" style="text-align: center; display: none;">
+                        <img src="https://js.klevu.com/klevu-js-v1/img-1-1/ku-loader.gif" alt="Loading...">
+                    </div>
+                    <div class="kuNoRecordFound" id="kuNoRecordFound" style="display:none;">
+                        <p>No matching products found.</p>
+                    </div>
+                    <div class="kuProListing" id="kuProListing" style="display: block;">
+
+                        <div class="kuFilters kuPriceSliderActive kuMulticheck">
+                            <div class="filterOuter">
+                                <div class="cu_total-res-found">
+                                    <span>Found </span>
+                                    <span>12</span>
+                                    <span> results for </span>
+                                    <span>"laker"</span>
+                                </div>
+                                <div class="kuFilterHead kufilter-label toggle" id="klevuNarrowByLabel"
+                                     style="margin-top: 0px; display: block;">Filter
+                                </div>
+                            </div>
+                            <div class="toggle-content" id="kuFilters">
+                                <div class="kuFilterBox kuHover" id="kuFilterBox-size">
+                                    <div class="kuFilterHead kuExpand" id="kuFilterHead-size"
+                                         onclick="klevu_landingFilters.collapseExpand( 'kuFilterHead-size', 'kuFilterNames-size', 'kuShowOpt-size', 'kuHideOpt-size', 'kuFilterBox-size' );">
+                                        SIZE<span class="filterOpen">+</span>
+                                    </div>
+                                    <div class="kuFilterNames" id="kuFilterNames-size" style="display: none;">
+                                        <ul>
+                                            <li id="0size" class="" style="order: 3;">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('0size~text', true );"
+                                                   title="L">
+                                                    <span class="kuFilterLabel">L</span>
+                                                    <span class="kuFilterTotal">12</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="0size~text" value="size:L">
+                                            <li id="1size" class="" style="order: 2;">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('1size~text', true );"
+                                                   title="M">
+                                                    <span class="kuFilterLabel">M</span>
+                                                    <span class="kuFilterTotal">12</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="1size~text" value="size:M">
+                                            <li id="2size" class="" style="order: 1;">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('2size~text', true );"
+                                                   title="S">
+                                                    <span class="kuFilterLabel">S</span>
+                                                    <span class="kuFilterTotal">12</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="2size~text" value="size:S">
+                                            <li id="3size" class="" style="order: 4;">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('3size~text', true );"
+                                                   title="XL">
+                                                    <span class="kuFilterLabel">XL</span>
+                                                    <span class="kuFilterTotal">12</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="3size~text" value="size:XL">
+                                            <li id="4size" class="" style="order: 5;">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('4size~text', true );"
+                                                   title="XXL">
+                                                    <span class="kuFilterLabel">XXL</span>
+                                                    <span class="kuFilterTotal">12</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="4size~text" value="size:XXL">
+                                            <li id="5size" class="" style="order: 6;">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('5size~text', true );"
+                                                   title="3XL">
+                                                    <span class="kuFilterLabel">3XL</span>
+                                                    <span class="kuFilterTotal">11</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="5size~text" value="size:3XL">
+                                            <li id="6size" class="" style="order: 0;">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('6size~text', true );"
+                                                   title="XS">
+                                                    <span class="kuFilterLabel">XS</span>
+                                                    <span class="kuFilterTotal">6</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="6size~text" value="size:XS">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="kuFilterBox kuHover" id="kuFilterBox-color">
+                                    <div class="kuFilterHead kuExpand" id="kuFilterHead-color"
+                                         onclick="klevu_landingFilters.collapseExpand( 'kuFilterHead-color', 'kuFilterNames-color', 'kuShowOpt-color', 'kuHideOpt-color', 'kuFilterBox-color' );">
+                                        COLOR<span class="filterOpen">+</span>
+                                    </div>
+                                    <div class="kuFilterNames" id="kuFilterNames-color" style="display: none;">
+                                        <ul>
+                                            <li id="0color" class="" style="position: relative;">
+                                                <div id="0colorSwatch" class="common_colorSwatch"
+                                                     style="background-color: grey;"></div>
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('0color~text', true );"
+                                                   title="Grey">
+                                                    <span class="kuFilterLabel">Grey</span>
+                                                    <span class="kuFilterTotal">6</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="0color~text" value="color:Grey">
+                                            <li id="1color" class="" style="position: relative;">
+                                                <div id="1colorSwatch" class="common_colorSwatch"
+                                                     style="background-color: yellow;"></div>
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('1color~text', true );"
+                                                   title="Yellow">
+                                                    <span class="kuFilterLabel">Yellow</span>
+                                                    <span class="kuFilterTotal">3</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="1color~text" value="color:Yellow">
+                                            <li id="2color" class="" style="position: relative;">
+                                                <div id="2colorSwatch" class="common_colorSwatch"
+                                                     style="background-color: black;"></div>
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('2color~text', true );"
+                                                   title="Black">
+                                                    <span class="kuFilterLabel">Black</span>
+                                                    <span class="kuFilterTotal">1</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="2color~text" value="color:Black">
+                                            <li id="3color" class="" style="position: relative;">
+                                                <div id="3colorSwatch" class="common_colorSwatch"
+                                                     style="background-color: purple;"></div>
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('3color~text', true );"
+                                                   title="Purple">
+                                                    <span class="kuFilterLabel">Purple</span>
+                                                    <span class="kuFilterTotal">2</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="3color~text" value="color:Purple">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="kuFilterBox kuHover" id="kuFilterBox-style">
+                                    <div class="kuFilterHead kuCollapse" id="kuFilterHead-style"
+                                         onclick="klevu_landingFilters.collapseExpand( 'kuFilterHead-style', 'kuFilterNames-style', 'kuShowOpt-style', 'kuHideOpt-style', 'kuFilterBox-style' );">
+                                        STYLE<span class="filterOpen">+</span>
+                                    </div>
+                                    <div class="kuFilterNames" id="kuFilterNames-style" style="display: block;">
+                                        <ul>
+                                            <li id="0style" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('0style~text', true );"
+                                                   title="T-Shirts">
+                                                    <span class="kuFilterLabel">T-Shirts</span>
+                                                    <span class="kuFilterTotal">9</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="0style~text" value="style:T-Shirts">
+                                            <li id="1style" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('1style~text', true );"
+                                                   title="Hoodies">
+                                                    <span class="kuFilterLabel">Hoodies</span>
+                                                    <span class="kuFilterTotal">2</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="1style~text" value="style:Hoodies">
+                                            <li id="2style" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('2style~text', true );"
+                                                   title="Sweatshirts">
+                                                    <span class="kuFilterLabel">Sweatshirts</span>
+                                                    <span class="kuFilterTotal">1</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="2style~text" value="style:Sweatshirts">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="kuFilterBox kuHover" id="kuFilterBox-collection">
+                                    <div class="kuFilterHead kuExpand" id="kuFilterHead-collection"
+                                         onclick="klevu_landingFilters.collapseExpand( 'kuFilterHead-collection', 'kuFilterNames-collection', 'kuShowOpt-collection', 'kuHideOpt-collection', 'kuFilterBox-collection' );">
+                                        COLLECTION<span class="filterOpen">+</span>
+                                    </div>
+                                    <div class="kuFilterNames" id="kuFilterNames-collection" style="display: none;">
+                                        <ul>
+                                            <li id="0collection" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('0collection~text', true );"
+                                                   title="NBA">
+                                                    <span class="kuFilterLabel">NBA</span>
+                                                    <span class="kuFilterTotal">10</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="0collection~text" value="collection:NBA">
+                                            <li id="1collection" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('1collection~text', true );"
+                                                   title="Pop Culture">
+                                                    <span class="kuFilterLabel">Pop Culture</span>
+                                                    <span class="kuFilterTotal">1</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="1collection~text" value="collection:Pop Culture">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="kuFilterBox kuHover" id="kuFilterBox-brand">
+                                    <div class="kuFilterHead kuExpand" id="kuFilterHead-brand"
+                                         onclick="klevu_landingFilters.collapseExpand( 'kuFilterHead-brand', 'kuFilterNames-brand', 'kuShowOpt-brand', 'kuHideOpt-brand', 'kuFilterBox-brand' );">
+                                        BRAND<span class="filterOpen">+</span>
+                                    </div>
+                                    <div class="kuFilterNames" id="kuFilterNames-brand" style="display: none;">
+                                        <ul>
+                                            <li id="0brand" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('0brand~text', true );"
+                                                   title="NBA AND LAKERS CURRENT MARKS NBPA">
+                                                    <span class="kuFilterLabel">NBA AND LAKERS CURRENT MARKS NBPA</span>
+                                                    <span class="kuFilterTotal">6</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="0brand~text"
+                                                   value="brand:NBA AND LAKERS CURRENT MARKS NBPA">
+                                            <li id="1brand" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('1brand~text', true );"
+                                                   title="NBA AND LAKERS CURRENT MARKS">
+                                                    <span class="kuFilterLabel">NBA AND LAKERS CURRENT MARKS</span>
+                                                    <span class="kuFilterTotal">2</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="1brand~text"
+                                                   value="brand:NBA AND LAKERS CURRENT MARKS">
+                                            <li id="2brand" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('2brand~text', true );"
+                                                   title="Grateful Dead">
+                                                    <span class="kuFilterLabel">Grateful Dead</span>
+                                                    <span class="kuFilterTotal">1</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="2brand~text" value="brand:Grateful Dead">
+                                            <li id="3brand" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('3brand~text', true );"
+                                                   title="LeBron James Family Foundation">
+                                                    <span class="kuFilterLabel">LeBron James Family Foundation</span>
+                                                    <span class="kuFilterTotal">1</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="3brand~text"
+                                                   value="brand:LeBron James Family Foundation">
+                                            <li id="4brand" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('4brand~text', true );"
+                                                   title="MAMBA ON THREE">
+                                                    <span class="kuFilterLabel">MAMBA ON THREE</span>
+                                                    <span class="kuFilterTotal">1</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="4brand~text" value="brand:MAMBA ON THREE">
+                                            <li id="5brand" class="">
+                                                <a href="javascript:void(0);"
+                                                   onclick="klevu_landingFilters.sendColorQuery('5brand~text', true );"
+                                                   title="Unlicensed">
+                                                    <span class="kuFilterLabel">Unlicensed</span>
+                                                    <span class="kuFilterTotal">1</span>
+                                                </a>
+                                            </li>
+                                            <input type="hidden" id="5brand~text" value="brand:Unlicensed">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="kuFilterBox" style="height: 50px;" id="kuFilterBox-Price-Range">
+                                    <div class="kuFilterHead kuExpand" id="kuFilterHead-Price-Range"
+                                         onclick="klevu_landingFilters.collapseExpand( 'kuFilterHead-Price-Range', 'kuFilterNames-Price-Range', 'kuShowOpt-Price-Range', 'kuHideOpt-Price-Range', 'kuFilterBox-Price-Range' );">
+                                        PRICE RANGE<span class="filterOpen">+</span>
+                                    </div>
+                                    <div class="kuFilterNames" id="kuFilterNames-Price-Range" style="display: none;">
+                                        <div class="kuPriceRangeSlider">
+                                            <div id="ku-price-range"
+                                                 class="kuPS-target kuPS-ltr kuPS-horizontal kuPS-background">
+                                                <div class="kuPS-base">
+                                                    <div class="kuPS-origin kuPS-connect kuPS-draggable"
+                                                         style="left: 0%;">
+                                                        <div class="kuPS-handle kuPS-handle-lower">
+                                                            <div class="kuPS-tooltip">$&nbsp;20</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="kuPS-origin kuPS-background" style="left: 100%;">
+                                                        <div class="kuPS-handle kuPS-handle-upper">
+                                                            <div class="kuPS-tooltip">$&nbsp;74</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span id="ku-from-price"></span>&nbsp;
+
+                                                <span id="ku-to-price"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kuResultList" id="kuResultListBlock">
+                            <div class="kuResultInfo">
+                                <div class="kuTotResults" id="kuTotResults">
+                                    <strong>12</strong> Result(s) found for 'laker'
+
+                                </div>
+                                <div class="kuPagination" id="kuPagination1">
+                                    <a href="javascript:void(0);" class="kuCurrent" target="_self">1</a>&nbsp;
+
+                                </div>
+                                <div class="kuPagination" id="kuPagination3" style="display:none;"></div>
+                                <div class="kuClearBoth"></div>
+                            </div>
+                            <div class="kuProductContent" id="kuProductContent">
+                                <div class="kuSortHeader">
+                                    <div id="ku-search-filter-tags"></div>
+                                    <div class="kuSortingOpt">
+                                        <div class="kuSortby">
+                                            <label id="klevuSortLbl" for="kuSortby">Sort by:</label>
+                                            <select name="kuSortby" id="kuSortby"
+                                                    onchange="klevu_changeSortingOptionsForLandigPage(this.value);"
+                                                    style="height: auto;">
+                                                <option value="rel" id="klevuRelSort">Relevance</option>
+                                                <option value="lth" id="klevuLthSort">Price: Low to High</option>
+                                                <option value="htl" id="klevuLthSort">Price: High to low</option>
+                                            </select>
+                                            <div class="select-items select-hide"></div>
+                                        </div>
+                                        <div class="kuClearLeft"></div>
+                                    </div>
+                                </div>
+                                <div class="kuGridView" id="kuResultsView">
+                                    <ul id="kuLandingProductsListUl">
+                                        <li>
+                                            <div class="kuSaleTag">SALE</div>
+                                            <div class="klevuImgWrap">
+
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product1-black.webp" alt="">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName"><a href="#" target="_blank">Women's Go-To Cozy
+                                                        Zip Hoodie</a></div>
+                                                    <div class="kuDesc">We turned the warm up to eleven with this one:
+                                                        our women’s Go-To Cozy Zip Hoodie is big on fleecy comfort, ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuOrigPrice">$55</div>
+                                                    <div class="kuSalePrice kuSpecialPrice">$42</div>
+                                                </div>
+                                                <div style="clear: both;"></div>
+                                                <div class="kuColorNumbers">2 Colors available</div>
+                                                <div class="klevuSwatches">
+                                                    <div class="klevuSwatchItem">
+                                                        <a href="javascript:void(0);"
+                                                           class="klevuSwatchLink" data-id="grey"
+                                                           style="background-color:#dcdcdc; background-image:url('');"
+                                                           title="Ash"></a>
+                                                    </div>
+                                                    <div class="klevuSwatchItem">
+                                                        <a href="javascript:void(0);"
+                                                           class="klevuSwatchLink" data-id="black"
+                                                           style="background-color:#333333; background-image:url('');"
+                                                           title="Charcoal"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product2.webp" alt="Klevu search product">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#-hoodie" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">Los Angeles Lakers Hoodie</a>
+                                                    </div>
+                                                    <div class="kuDesc">Lakers Forever: that’s the inspiration behind
+                                                        our super-soft hoodie straight from the Staples Center. ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuSalePrice">$65</div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product3.webp" alt="Klevu search product">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">Lebron King James Lakers</a>
+                                                    </div>
+                                                    <div class="kuDesc">The Return of the King: Lakers edition. Lebron
+                                                        is back, baby, and LA is ready for the resurgence. With ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuSalePrice">$36</div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product4.webp" alt="Klevu search product">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">NBA Jam Lakers Davis And Kuzma</a>
+                                                    </div>
+                                                    <div class="kuDesc">Boomshakalaka! Anthony Davis’s big move to LA in
+                                                        the offseason puts him in rotation with a whole new ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuSalePrice">$36</div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product5.webp" alt="Klevu search product">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">Lakers Superstar Anthony Davis</a>
+                                                    </div>
+                                                    <div class="kuDesc">Six-time All-Star and Olympic gold medalist
+                                                        Anthony Davis is coming to LA, and we’re celebrating with ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuSalePrice">$36</div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product6.webp" alt="Klevu search product">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">NBA Jam Lakers Ball And Kuzma</a>
+                                                    </div>
+                                                    <div class="kuDesc">Though there’s a certain member of basketball
+                                                        royalty joining the Lakers this year, our eyes are still ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuOrigPrice">$36</div>
+                                                    <div class="kuSalePrice kuSpecialPrice">$20</div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product7.webp" alt="Klevu search product">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">NBA Jam Lakers Davis And Kuzma
+                                                            Hoodie</a>
+                                                    </div>
+                                                    <div class="kuDesc">Boomshakalaka! The 2019 Lakers are a who’s-who
+                                                        of once-in-a-generation talent, with Anthony Davis and ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuOrigPrice">$70</div>
+                                                    <div class="kuSalePrice kuSpecialPrice">$52</div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product8.webp" alt="Klevu search product">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">Los Angeles Lakers</a>
+                                                    </div>
+                                                    <div class="kuDesc">Big things are happening at the Staples Center,
+                                                        and we’re here for it. With the arrival of you-know-who, ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuSalePrice">$32</div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product9.webp" alt="Klevu search product">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">It's LA</a>
+                                                    </div>
+                                                    <div class="kuDesc">Los Angeles is special, and sportswriter Zach
+                                                        Schwartz’s tweet about his experience at an L.A. florist ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuSalePrice">$32</div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product10.webp" alt="Klevu search product">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">NBA Jam Razzle Dazzle Anthony
+                                                            Davis</a>
+                                                    </div>
+                                                    <div class="kuDesc">Razzle Dazzle! Take the outrageous talent of
+                                                        today, add some retro flair, and what’s the end result? ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuOrigPrice">$36</div>
+                                                    <div class="kuSalePrice kuSpecialPrice">$27</div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product11.webp" alt="Klevu search product">
+                                                </a>
+                                                <div class="kuAddtocart">
+                                                    <a href="#" class="kuAddtocartBtn">View Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="klevu-clearboth-listview"></div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">LeBron James Just A Kid From
+                                                            Akron</a>
+                                                    </div>
+                                                    <div class="kuDesc">Once-in-a-generation players are hard to come
+                                                        by. Who ever thought that just a kid from Akron would be ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuSalePrice">$34</div>
+                                                </div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                        <li>
+                                            <div class="klevuImgWrap">
+                                                <a href="#" target="_blank">
+                                                    <img id="#" src="img/product12.webp" alt="Klevu search product">
+                                                </a>
+                                            </div>
+                                            <div class="kuNameWrap">
+                                                <div class="kuNameDesc">
+                                                    <div class="kuName">
+                                                        <a href="#" target="_blank">Store x Starter NBA Lakers Warmup
+                                                            Jacket</a>
+                                                    </div>
+                                                    <div class="kuDesc">It’s the ultimate hoops throwback - a limited
+                                                        edition Store x Starter Lakers warmup jacket inspired ...
+                                                    </div>
+                                                </div>
+                                                <div class="kuPrice">
+                                                    <div class="kuOrigPrice">$99</div>
+                                                    <div class="kuSalePrice kuSpecialPrice">$74</div>
+                                                </div>
+                                                <div class="klevu-out-of-stock">Check availability</div>
+                                            </div>
+                                            <div class="kuClearLeft"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="kuBottomPagi">
+                                    <div class="kuPerPage">
+                                        <label id="klevuItemsPerPageFooter" for="noOfRecords2">Items per page:</label>
+                                        <select onchange="klevu_changeItemsPerPage(this.value);" id="noOfRecords2"
+                                                style="height: auto;">
+                                            <option>24</option>
+                                            <option>36</option>
+                                            <option>48</option>
+                                        </select>
+                                    </div>
+                                    <div class="kuPagination" id="kuPagination2">
+                                        <a href="javascript:void(0);" class="kuCurrent" target="_self">1</a>&nbsp;
+
+                                    </div>
+                                    <div class="kuClearBoth"></div>
+                                </div>
+                            </div>
+                            <div class="kuOtherContent" id="kuOtherContent">
+                                <div class="kuSortHeader">
+                                    <div class="kuSortingOpt">
+                                        <div class="kuPerPage">
+                                            <label id="klevuItemsPerPageCms" for="noOfRecords3">Items per page:</label>
+                                            <select onchange="klevu_changeCmsItemsPerPage(this.value);"
+                                                    id="noOfRecords3" style="height: auto;">
+                                                <option>24</option>
+                                                <option>36</option>
+                                                <option>48</option>
+                                                rn
+
+                                            </select>
+                                        </div>
+                                        <div class="kuClearLeft"></div>
+                                    </div>
+                                </div>
+                                <div class="kuListView kuOtherContentView" id="kuOtherContentView"></div>
+                                <div class="kuSortHeader">
+                                    <div class="kuSortingOpt">
+                                        <div class="kuPerPage">
+                                            <label id="klevuItemsPerPageCmsFooter" for="noOfRecords4">Items per
+                                                page:</label>
+                                            <select onchange="klevu_changeCmsItemsPerPage(this.value);"
+                                                    id="noOfRecords4" style="height: auto;">
+                                                <option>24</option>
+                                                <option>36</option>
+                                                rn
+
+                                                <option>48</option>
+                                            </select>
+                                        </div>
+                                        <div class="kuPagination" id="kuPagination4"></div>
+                                        <div class="kuClearLeft"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kuClearBoth"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--ends main-->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <span>&nbsp;</span>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="column productImage">
+                    <figure>
+                        <img src="img/product1-black.webp" alt="product1">
+                    </figure>
+                </div>
+                <div class="column productDetails">
+                    <h3><span class="productName">Siddhi</span></h3>
+                    <p>Price: <span class="productPrice">$0</span></p>
+                </div>
+            </div>
+        </div>
+        <!--        <div class="modal-footer">-->
+        <!--            <h3>Modal Footer</h3>-->
+        <!--        </div>-->
+    </div>
+
+</div>
+<!-- klevu files-->
+<script src="https://js.klevu.com/klevu-js-v1/js-1-1/klevu-landing.js" charset="UTF-8"></script>
+<script src="js/main.js"></script>
+<!--<script> document.getElementById('searchedKeyword').value= klevu_getParamValue("q"); </script>-->
+<script>
+    /*var klevu_storeLandingPageUrl = "searchdemo/search-result.html";
+
+    var klevu_apiKey = 'klevu-15566479644939759',
+        searchTextBoxName = 'q',
+        klevu_lang = 'en',
+         klevu_result_top_margin = '',
+        klevu_result_left_margin = '';
+    (function () {
+        var ws = document.createElement('script'),kl_protocol=("https:"===document.location.protocol?"https://":"http://");ws.type = 'text/javascript'; ws.async = true; ws.src= 'assets/klevu-webstore.js';var s =document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ws, s); })();
+*/
+</script>
+
+</body>
+<head>
+    <meta charset="utf-8">
+    <title>Klevu Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800" rel="stylesheet">
+    <link href="css/custom-style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/klevu-landing-page-style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/klevu-landing-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+</html>
